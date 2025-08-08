@@ -1,0 +1,12 @@
+RewriteEngine on 
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?/$1 [L]
+
+php_value max_execution_time 4000
+php_value memory_limit 512M
+php_value max_input_time 60
+php_value max_input_vars 150000
+php_value suhosin.get.max_vars 150000
+php_value suhosin.post.max_vars 150000
+php_value suhosin.request.max_vars 150000
